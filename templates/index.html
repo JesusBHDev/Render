@@ -6,6 +6,11 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <title>Mi Información</title>
     <style>
+      body {
+        background-color: black;
+        color: green;
+        font-weight: bold;
+      }
       .container {
         margin-top: 50px;
       }
@@ -17,7 +22,21 @@
         text-align: center;
         font-size: 1.2em;
       }
+      .btn-saludo {
+        display: block;
+        margin: 20px auto;
+      }
+      .mensaje {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 1.2em;
+      }
     </style>
+    <script>
+      function saludar() {
+        document.getElementById('mensaje-saludo').innerText = 'Enviaste un saludo a Jesus';
+      }
+    </script>
   </head>
   <body>
     <div class="container">
@@ -29,6 +48,8 @@
         Soy de 9º cuatrimestre del grupo B<br>
         De la universidad UTHH
       </div>
+      <button class="btn btn-success btn-saludo" onclick="saludar()">Salúdame</button>
+      <div id="mensaje-saludo" class="mensaje"></div>
     </div>
   </body>
 </html>
