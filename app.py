@@ -1,14 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
+Bootstrap(app)
 
 @app.route('/')
 def home():
-    return """
-    Mi nombre es Jesus Ivan Bautista Hernandez<br>
-    Soy de 9º cuatrimestre del grupo<br>
-    De la universidad UTHH
-    """
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
